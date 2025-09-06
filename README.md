@@ -339,9 +339,8 @@ goimports -w .
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🔗 Related Projects
+## 🔗 Related Documents
 
-- **TinyCNN (Original C Implementation)**: The source project this Go implementation is based on
 - **CIFAR-10 Dataset**: [https://www.cs.toronto.edu/~kriz/cifar.html](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 ## 📞 Support

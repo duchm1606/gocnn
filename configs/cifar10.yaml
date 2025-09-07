@@ -1,0 +1,33 @@
+model_name: "GoCNN-CIFAR10"
+input_size: 32
+input_channels: 3
+num_classes: 10
+class_names:
+  - "Airplane"
+  - "Automobile"
+  - "Bird"
+  - "Cat"
+  - "Deer"
+  - "Dog"
+  - "Frog"
+  - "Horse"
+  - "Ship"
+  - "Truck"
+
+architecture:
+  layers:
+    - type: "conv2d"
+      filters: 32
+      size: 3
+      stride: 1
+      padding: 1
+    - type: "conv2d"
+      filters: 32
+      size: 3
+      stride: 1
+      padding: 1
+    - type: "maxpool"
+      size: 2
+      stride: 2
+    # Add more layers as you implement them
+```

@@ -62,7 +62,7 @@ func (dm *DataManager) LoadModelWeights() (*ModelWeights, error) {
     
     for i, config := range layerConfigs {
         // Load kernel
-        kernelFile := fmt.Sprintf("%s_weight.bin", config.name)
+        kernelFile := fmt.Sprintf("%s/%s_weight.bin", config.name, config.name)
         kernel, err := dm.weightLoader.LoadKernel(kernelFile, config.size, config.channels, config.filters)
         if err != nil {
             return nil, fmt.Errorf("failed to load kernel for %s: %w", config.name, err)
@@ -70,7 +70,7 @@ func (dm *DataManager) LoadModelWeights() (*ModelWeights, error) {
         weights.Kernels = append(weights.Kernels, kernel)
         
         // Load bias
-        biasFile := fmt.Sprintf("%s_bias.bin", config.name)
+        biasFile := fmt.Sprintf("%s/%s_bias.bin", config.name, config.name)
         bias, err := dm.weightLoader.LoadBias(biasFile, config.filters)
         if err != nil {
             return nil, fmt.Errorf("failed to load bias for %s: %w", config.name, err)
